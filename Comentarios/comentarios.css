@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: rgb(30, 30, 52);
+}
+.comments-container {
+  width: 800px;
+  margin: 100px auto;
+}
+.comments-container > .comment {
+  margin-bottom: 10px;
+}
+.line {
+  position: relative;
+  width: 10px;
+  height: 50%;
+  border-left: solid 1px #558bff;
+  border-bottom: solid 1px #558bff;
+  border-radius: 0 0 0 8px;
+}
