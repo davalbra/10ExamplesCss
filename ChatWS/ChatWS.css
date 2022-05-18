@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+}
+.chat-container {
+  width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100vh;
+  background-color: #233f52;
+  box-sizing: border-box;
+  gap: 10px;
+  padding: 30px;
+}
+.bubble-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.left {
+  width: 50%;
+  margin-right: auto;
+}
+.right {
+  width: 50%;
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.bubble-container.left .bubble:nth-child(1) .bubble-text > div::before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: solid 5px #202c33;
+  border-top: solid 5px #202c33;
+  border-left: solid 5px transparent;
+  border-bottom: solid 5px transparent;
+  left: -6px;
+  top: 0;
+}
+.bubble-container.right .bubble:nth-child(1) .bubble-text > div::before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: solid 5px #005c4b;
+  border-top: solid 5px #005c4b;
+  border-right: solid 5px transparent;
+  border-bottom: solid 5px transparent;
+  right: -6px;
+  top: 0;
+}
+.bubble-text {
+  color: white;
+}
+.bubble-container.right .bubble .bubble-text > div {
+  position: relative;
+  background-color: #005c4b;
+}
+.bubble-container.left .bubble .bubble-text > div {
+  position: relative;
+  background-color: #202c33;
+}
+.bubble-container .bubble .bubble-text > div {
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.bubble-info {
+  font-size: 12px;
+  color: rgb(255, 255, 255, 0.7);
+  padding: 0 10px;
+  text-align: right;
+  width: 80px;
+}
