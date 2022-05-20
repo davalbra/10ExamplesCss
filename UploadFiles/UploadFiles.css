@@ -11,10 +11,6 @@ html {
   box-sizing: inherit;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 8;
-}
-
 .upload-container {
   margin: 100px auto;
   width: 500px;
@@ -24,18 +20,20 @@ html {
   padding: 50px 30px;
   box-sizing: border-box;
 }
+
 .upload-container > .title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-.description {
-  color: #999;
+
+.upload-container .description {
 }
-.drag-drop {
+
+.upload-container .drag-drop {
   border: dashed 3px #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  box-sizing: inherit;
   padding: 60px 30px;
   margin: 20px 0;
   line-height: 1.5;
@@ -46,6 +44,96 @@ html {
   gap: 10px;
 }
 
-.drag-drop .icon span {
-  color: rgba(77, 134, 240, 0.5);
+.upload-container .drag-drop .icon svg {
+  width: 100px;
+  height: 100px;
+  fill: rgba(77, 134, 240, 0.5);
+}
+
+.upload-container .drag-drop .btn {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4d86f0;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  min-width: 200px;
+  cursor: pointer;
+}
+.upload-container .drag-drop .btn:hover {
+  background-color: #3c6dc0;
+}
+
+.upload-container .uploaded-files {
+}
+
+.upload-container .title-section {
+  text-align: left;
+  color: #555;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+
+.upload-container .uploaded-files {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.upload-container .uploaded-files .file {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 6px;
+}
+.upload-container .uploaded-files .file:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.upload-container .uploaded-files .file .icon {
+  width: 48px;
+}
+.upload-container .uploaded-files .file .icon img {
+  width: 48px;
+  height: 48px;
+}
+.upload-container .uploaded-files .file .title {
+  flex: 1;
+}
+
+.upload-container .uploaded-files .file .title .name {
+  display: block;
+}
+.upload-container .uploaded-files .file .title .size {
+  font-size: 14px;
+  color: #999;
+}
+.upload-container .uploaded-files .file .title .progress {
+  height: 5px;
+  width: 100%;
+  background-color: #ccc;
+  margin: 10px 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.upload-container .uploaded-files .file .title .progress .progress-60 {
+  background-color: #4d86f0;
+  height: 5px;
+  width: 60%;
+  border-radius: 4px;
+}
+
+.upload-container .uploaded-files .file .actions button {
+  padding: 10px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.upload-container .uploaded-files .file .actions button:hover {
+  background-color: #ddd;
 }
